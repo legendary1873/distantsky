@@ -2,16 +2,17 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    border-radius: 0 !important;
 }
 
 html, body {
     width: 100%;
     height: 100%;
-    background-color: #050505;
-    color: #888888;
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 14px;
-    line-height: 1.6;
+    background-color: #000000;
+    color: #e0e0e0;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 13px;
+    line-height: 1.5;
     overflow: hidden;
     user-select: none;
 }
@@ -26,29 +27,28 @@ html, body {
 
 #game-container {
     display: flex;
-    width: 100%;
-    max-width: 1100px;
-    height: 85vh;
+    width: 90%;
+    max-width: 960px;
+    height: 80vh;
     background-color: #000000;
-    border: 1px solid #1a1a1a;
-    padding: 25px;
-    gap: 30px;
+    padding: 20px;
+    gap: 40px;
 }
 
 #log-container {
-    flex: 1.2;
+    flex: 1;
     display: flex;
     flex-direction: column-reverse;
     overflow-y: auto;
-    padding-right: 15px;
-    border-right: 1px dashed #1e1e1e;
+    padding-right: 20px;
+    border-right: 1px solid #222222;
 }
 
 #panel-container {
     flex: 1;
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 20px;
     overflow-y: auto;
 }
 
@@ -56,68 +56,70 @@ html, body {
     flex: 0.8;
     display: flex;
     flex-direction: column;
-    gap: 15px;
-    border-left: 1px dashed #1e1e1e;
-    padding-left: 15px;
+    gap: 20px;
+    border-left: 1px solid #222222;
+    padding-left: 20px;
     overflow-y: auto;
 }
 
 .header {
     font-weight: bold;
-    color: #cccccc;
+    color: #ffffff;
     text-transform: lowercase;
     letter-spacing: 1px;
-    border-bottom: 1px solid #222222;
-    padding-bottom: 6px;
-    margin-bottom: 12px;
+    border-bottom: 1px solid #333333;
+    padding-bottom: 4px;
+    margin-bottom: 8px;
 }
 
 #log p {
-    margin-bottom: 10px;
-    color: #666666;
+    margin-bottom: 6px;
+    color: #555555;
 }
 
 #log p:first-child {
-    color: #e0e0e0;
+    color: #eeeeee;
 }
 
 button, .btn {
-    background: transparent;
-    color: #aaaaaa;
-    border: 1px solid #333333;
-    padding: 8px 14px;
-    font-family: inherit;
+    background-color: #000000;
+    color: #cccccc;
+    border: 1px solid #444444;
+    padding: 6px 12px;
+    font-family: "Courier New", Courier, monospace;
     font-size: 13px;
     cursor: pointer;
-    text-align: left;
+    text-align: center;
     text-transform: lowercase;
-    transition: all 0.2s ease;
     outline: none;
-    display: block;
-    width: 100%;
-    margin-bottom: 10px;
+    display: inline-block;
+    width: auto;
+    min-width: 120px;
+    margin-bottom: 8px;
 }
 
 button:hover:not(:disabled) {
-    background-color: #111111;
-    color: #ffffff;
-    border-color: #666666;
+    background-color: #eeeeee;
+    color: #000000;
+    border-color: #eeeeee;
 }
 
 button:active:not(:disabled) {
-    background-color: #222222;
+    background-color: #ffffff;
+    color: #000000;
 }
 
 button:disabled {
     color: #333333;
-    border-color: #1a1a1a;
-    cursor: not-allowed;
+    border-color: #222222;
+    background-color: #000000;
+    cursor: default;
 }
 
 .row {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 6px;
+    margin-bottom: 4px;
     color: #888888;
 }
 
@@ -126,18 +128,17 @@ button:disabled {
 }
 
 .row .value {
-    color: #cccccc;
+    color: #dddddd;
 }
 
 ::-webkit-scrollbar {
-    width: 4px;
+    width: 2px;
 }
+
 ::-webkit-scrollbar-track {
     background: #000000;
 }
+
 ::-webkit-scrollbar-thumb {
-    background: #1e1e1e;
-}
-::-webkit-scrollbar-thumb:hover {
-    background: #333333;
+    background: #222222;
 }
